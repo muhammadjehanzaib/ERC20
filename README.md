@@ -1,66 +1,55 @@
-## Foundry
+## ERC20 
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**Erc20 by using openzeppelin and foundry framwork for testing**
 
-Foundry consists of:
+## Getting Started
+### Requirements
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+* git
+  * You'll know you did it right if you can run git --version and you see a response like git version x.x.x
+* foundry
+  * You'll know you did it right if you can run forge --version and you see a response like forge 0.2.0 (816e00b 2023-03-16T00:05:26.396218Z)
 
-## Documentation
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
+### Quickstarted
 
 ```shell
+$ git clone https://github.com/muhammadjehanzaib/ERC20.git
+$ cd ERC20
+$ forge install 
 $ forge build
+
 ```
 
-### Test
+### Start a local node
+ ```shell
+ $ anvil
+ ```
 
-```shell
-$ forge test
-```
+ ### Deploy
+ **This will default to your local node. You need to have it running in another terminal in order for it to deploy.**
+ ```shell
+ $ forge script script/DeployOurToken.s.sol --rpc-url http://localhost:8545
+ ```
 
-### Format
+ ### Testing 
+ ```shell
+ $ forge test
+ ```
 
-```shell
-$ forge fmt
-```
+ ### Test Converage
+ ```shell
+$ forge coverage
+ ```
 
-### Gas Snapshots
-
+### Estimate Gas
 ```shell
 $ forge snapshot
 ```
 
-### Anvil
-
+### Formating
 ```shell
-$ anvil
+$ forge fmt
 ```
 
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+# Thank You
